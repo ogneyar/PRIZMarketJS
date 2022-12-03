@@ -1,8 +1,12 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-import './App.css';
-import { Home } from './pages/Home';
-import Tutorial from './pages/tutorials/Tutorial';
+import React from 'react'
+import { 
+  BrowserRouter, Switch, Route, Redirect 
+} from 'react-router-dom'
+
+import { HomePage } from './pages/home/HomePage'
+import Tutorial from './pages/tutorials/Tutorial'
+
+import './styles/App.css'
 
 
 const App = () => {
@@ -10,7 +14,7 @@ const App = () => {
     <BrowserRouter>
         
         <Switch>
-          <Route component={ Home } path="/" exact />
+          <Route component={ HomePage } path="/" exact />
           <Route component={ Tutorial } path="/tutorials" />
           <Redirect to="/" />
         </Switch>
